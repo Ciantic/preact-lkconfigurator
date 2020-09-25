@@ -1,14 +1,34 @@
 @import "vars";
 @import "./newui.scss";
 
+.assistive-text {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 .lk-wrapper {
     min-height: 100%;
     position: relative;
 
     > .close {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0.8em;
+        right: 0.8em;
+        > svg {
+            width: 1.3em;
+            height: auto;
+            display: block;
+            fill: #000;
+            transition: fill $anim-speed;
+            &:hover {
+                fill: $color1;
+            }
+        }
     }
 
     @media (min-width: 760px) {

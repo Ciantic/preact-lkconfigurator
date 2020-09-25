@@ -10,17 +10,7 @@ import octagonSvg from "./lampokansi-model-4-octagon.svg";
 
 const DEFAULT_PROPS = {
     locale: "",
-    shareUrl: window.location.href,
-    shareTitle: "",
-    useFacebook: true,
-    useTwitter: true,
-    useWhatsapp: true,
-    useLink: true,
-    useEmail: true,
-    useLinkedin: false,
-    textShare: "",
-    textCopy: "",
-    css: "",
+    closeUrl: "/",
 };
 
 type PoolColor = "" | "gray" | "burgundi" | "mahogany" | "black";
@@ -62,6 +52,7 @@ function getFill(color: PoolColor): string {
 }
 
 const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsGiven) => {
+    const props = Object.assign({}, DEFAULT_PROPS, propsGiven);
     const [model, setModel] = useState("");
     const [shape, poolShapeRadio] = useRadioButton("" as PoolShape);
     const [insulationWidth, insulationWidthRadio] = useRadioButton("" as PoolInsluationWidths);
@@ -369,8 +360,11 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                 </div>
             </form>
 
-            <a class="close" href="">
+            <a class="close" href={props.closeUrl}>
                 <span class="assistive-text">Sulje</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+                </svg>
             </a>
         </div>
     );
