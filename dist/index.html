@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+        />
+        <title>lkconfigurator</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+            body {
+                font-family: "Open Sans";
+                font-size: 14px;
+            }
+
+            @media (max-width: 760px) {
+                body {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        <script src="./lkconfigurator.js"></script>
+    </head>
+    <body>
+        <h1>
+            <code>lkconfigurator</code>
+            preact component
+        </h1>
+        <p>Lämpökansi configurator</p>
+        <div id="root"></div>
+        <script>
+            lkconfigurator.create({}, document.querySelector("#root"));
+        </script>
+
+        <h2>Credits</h2>
+        <p>
+            Code author: &copy; Jari Otto Oskari Pennanen <br />
+            Code license: MIT, see LICENSE
+        </p>
+        <p>SVG Images by &copy; Tuomo Povelainen, All Rights Reserved.</p>
+    </body>
+</html>
