@@ -1,0 +1,226 @@
+@import "vars";
+@import "./newui.scss";
+
+.lk-wrapper {
+    min-height: 100%;
+    position: relative;
+
+    > .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @media (min-width: 760px) {
+        display: grid;
+        grid-template-columns: auto 29.5em;
+        > .lk-image {
+            box-sizing: border-box;
+            // width: calc(100% - 28em);
+            // float: left;
+            padding-top: 2em;
+            > svg {
+                position: sticky;
+                top: 2em;
+            }
+            background: #efefef;
+        }
+        > .lk-configurator {
+            box-sizing: border-box;
+            padding-right: 2em;
+            padding-left: 2em;
+            padding-bottom: 2em;
+            background: white;
+            // width: 28em;
+            // float: right;
+        }
+    }
+
+    @media (max-width: 760px) {
+        display: block;
+        > .lk-image {
+            width: 100%;
+            float: none;
+            box-sizing: border-box;
+            padding-top: 2em;
+        }
+
+        > .lk-configurator {
+            width: 100%;
+            float: none;
+            padding: 0 1em;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.lk-image {
+    display: block;
+    > svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 70em;
+        margin: 0 auto;
+    }
+    @media (max-width: 760px) {
+        > svg {
+            text {
+                font-size: 21px !important;
+            }
+        }
+    }
+}
+
+.lk-configurator {
+    padding-top: 1.5em;
+    h2 {
+        font-size: 1.85em;
+    }
+    h3 {
+        color: currentColor;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-top: 1px solid $color-splitter;
+        padding-top: 1.5em;
+        margin-top: 1.5em;
+        font-size: 1.25em;
+        .n {
+            background: $color1;
+            color: $color1-fg;
+            border-radius: 50%;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            text-align: center;
+            display: inline-block;
+            margin-right: 0.25em;
+            font-size: 115%;
+            position: relative;
+            top: -0.1em;
+        }
+        &.no-border {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+    .form-row {
+        display: block;
+        padding-bottom: 1.15em;
+        // > .text {
+        //     font-weight: bold;
+        //     display: block;
+        //     text-transform: uppercase;
+        // }
+        label {
+            line-height: inherit;
+            display: block;
+        }
+        .text {
+            display: block;
+        }
+    }
+
+    .choose-color,
+    .choose-shape {
+        .shapes {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1em;
+        }
+        .shape {
+            user-select: none;
+            display: block;
+            position: relative;
+            > svg {
+                width: 80%;
+                height: auto;
+                fill: $input-bg;
+            }
+            > input {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            > input:checked + svg {
+                stroke: $color1;
+                stroke-width: 3px;
+            }
+
+            &:hover .text,
+            > input:checked + svg + .text {
+                color: $color1;
+            }
+        }
+    }
+
+    .insulationwidth {
+        label {
+            cursor: pointer;
+            &:hover {
+                color: $color1;
+            }
+            input:checked + .text1 + .text2 + .price,
+            input:checked + .text1 + .text2,
+            input:checked + .text1 {
+                color: $color1;
+            }
+        }
+        > .table {
+            display: table;
+            border-collapse: separate;
+            border-spacing: 0 0.5em;
+            > label {
+                display: table-row;
+                > .text2,
+                > .text1 {
+                    display: table-cell;
+                    padding-right: 0.5em;
+                }
+                > .input {
+                    display: table-cell;
+                    width: 3em;
+                }
+                > .price {
+                    display: table-cell;
+                    width: 4em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .measurements {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 0 0.5em;
+        > label {
+            display: table-row;
+            > .before-text {
+                display: table-cell;
+                padding-right: 0.5em;
+            }
+            > input {
+                display: table-cell;
+                width: 3em;
+            }
+            > .after-text {
+                padding-left: 0.5em;
+                display: table-cell;
+            }
+        }
+        // .before-text {
+        //     display: inline-block;
+        //     width: 14em;
+        //     vertical-align: middle;
+        // }
+        // input {
+        //     display: inline-block;
+        //     width: 6.5em;
+        // }
+    }
+}

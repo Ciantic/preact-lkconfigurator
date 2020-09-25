@@ -1,0 +1,16 @@
+{
+    "presets": ["@babel/preset-typescript", "@babel/preset-env"],
+    "plugins": [
+        ["@babel/plugin-transform-react-jsx", { "pragma":"h" }],
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": false,
+                "helpers": false,
+                "regenerator": true,
+                "useESModules": true
+            }
+        ],
+        "@babel/plugin-proposal-class-properties"
+    ]
+}

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 780 780" xmlns="http://www.w3.org/2000/svg">
+  <g id="ocatagon">
+    <g id="Layer_48_copy"/>
+    <g id="Layer_104"/>
+    <g id="Layer_50_copy"/>
+    <g id="side-view_copy_2">
+      <g id="Layer_24_copy">
+        <path fill="#5A2524" d="M645.66,612.47c0,3.09-2.5,5.59-5.59,5.59H481.92v-85.67l158.15,9c3.09,0,5.59,2.5,5.59,5.59V612.47z"/>
+      </g>
+      <line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="4" x1="647.17" y1="562.06" x2="481.5" y2="562.06"/>
+    </g>
+    <g id="Layer_25_copy"/>
+    <g id="nuolet-side-view_copy_2">
+      <g id="Layer_16_copy_5_3_">
+        <polygon fill="#B9B8B9" points="671.2,607.37 668.86,612.26 666.51,607.37 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="671.2,570.92 668.86,566.02 666.51,570.92 &#9;&#9;&#9;"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="668.86" y1="570.76" x2="668.86" y2="607.51"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="674.36" y1="562.26" x2="663.36" y2="562.26"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="674.36" y1="616.51" x2="663.36" y2="616.51"/>
+      </g>
+    </g>
+    <g id="top-view_copy_2">
+      <rect x="293.17" y="532.39" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -288.8785 371.3629)" fill="#5A2524" width="21.33" height="4"/>
+      <rect x="293.17" y="655.72" transform="matrix(0.7071 0.7071 -0.7071 0.7071 554.0718 -22.2014)" fill="#5A2524" width="21.33" height="4"/>
+      <rect x="166.47" y="532.39" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -75.481 1037.5121)" fill="#5A2524" width="21.33" height="4"/>
+      <rect x="166.47" y="655.72" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 767.4692 997.55)" fill="#5A2524" width="21.33" height="4"/>
+      <polygon fill="#5A2524" points="273.97,679.05 206.04,679.05 158,631.02 158,563.09 206.04,515.05 273.97,515.05 322,563.09 &#10;&#9;&#9;&#9;322,631.02 &#9;&#9;"/>
+    </g>
+    <g id="nuolet-top-view_copy_2">
+      <g id="Layer_16_copy_5_2_">
+        <polygon fill="#B9B8B9" points="268.36,698.56 273.25,700.9 268.36,703.25 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="211.91,698.56 207.01,700.91 211.91,703.25 &#9;&#9;&#9;"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="211.75" y1="700.9" x2="268.5" y2="700.9"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="203.25" y1="695.4" x2="203.25" y2="706.4"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="277.5" y1="695.4" x2="277.5" y2="706.4"/>
+      </g>
+      <g id="Layer_16_copy_5_1_">
+        <polygon fill="#B9B8B9" points="360.2,649.37 357.86,654.26 355.51,649.37 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="360.2,543.92 357.86,539.02 355.51,543.92 &#9;&#9;&#9;"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="357.86" y1="543.76" x2="357.86" y2="649.51"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="363.36" y1="535.26" x2="352.36" y2="535.26"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="363.36" y1="658.51" x2="352.36" y2="658.51"/>
+      </g>
+      <g id="Layer_16_copy_5">
+        <polygon fill="#B9B8B9" points="130.2,669.37 127.86,674.26 125.51,669.37 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="130.2,522.92 127.86,518.02 125.51,522.92 &#9;&#9;&#9;"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="127.86" y1="522.76" x2="127.86" y2="669.51"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="133.36" y1="514.26" x2="122.36" y2="514.26"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="133.36" y1="678.51" x2="122.36" y2="678.51"/>
+      </g>
+    </g>
+    <g id="nuolet-mockup_copy_2">
+      <g id="Layer_13_copy_2">
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="143.5" y1="93.72" x2="475.83" y2="68.72"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="496.5" y1="69.89" x2="619.17" y2="99.05"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="136.5" y1="85.39" x2="136.5" y2="102.72"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="486.5" y1="60.05" x2="486.5" y2="77.39"/>
+        <line fill="none" stroke="#B9B8B9" stroke-miterlimit="10" x1="627.83" y1="91.72" x2="627.83" y2="109.06"/>
+      </g>
+      <g id="Layer_15_copy_2">
+        <polygon fill="#B9B8B9" points="474.5,66.56 479.71,68.11 475.24,71.2 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="618.67,96.6 623.04,99.82 617.8,101.2 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="497.42,72.27 492.93,69.22 498.12,67.63 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="145.58,90.95 141.14,94.07 146.36,95.57 &#9;&#9;&#9;"/>
+      </g>
+      <g id="Layer_23_copy_2">
+        <polygon fill="#B9B8B9" points="128.34,207.37 125.99,212.26 123.65,207.37 &#9;&#9;&#9;"/>
+        <polygon fill="#B9B8B9" points="128.34,199.92 126,195.02 123.65,199.92 &#9;&#9;&#9;"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="125.99" y1="199.76" x2="125.99" y2="207.51"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="131.24" y1="191.26" x2="120.24" y2="191.26"/>
+        <line fill="none" stroke="#B9B8B9" stroke-width="0.75" stroke-miterlimit="10" x1="131.24" y1="215.51" x2="120.24" y2="215.51"/>
+      </g>
+    </g>
+    <g id="text_copy_2">
+      <rect x="260.5" y="45.05" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 260.501 55.6948)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; white-space: pre;">A = 200 cm</text>
+      <rect x="47" y="197.06" fill="none" width="85" height="41"/>
+      <text style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; text-anchor: end; white-space: pre;" x="107" y="207.695">D = 10 cm</text>
+      <rect x="7.47" y="590.39" fill="none" width="109" height="25"/>
+      <text style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; text-anchor: end; white-space: pre;" x="109.937" y="601.029">A = 200 cm</text>
+      <rect x="157.5" y="485.55" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 157.501 494.6748)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 12px; font-weight: 700; white-space: pre;">YLÄKUVA</text>
+      <rect x="481.5" y="485.89" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 481.501 495.0078)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 12px; font-weight: 700; white-space: pre;">SIVUKUVA</text>
+      <rect x="481.5" y="504.22" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 481.501 513.3408)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 12px; white-space: pre;">Helman pituus</text>
+      <rect x="200.83" y="717.72" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 200.835 728.3613)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; white-space: pre;">B = 200 cm</text>
+      <rect x="370.75" y="593.39" fill="none" width="86.08" height="25"/>
+      <text transform="matrix(1 0 0 1 370.7529 604.0293)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; white-space: pre;">E = 70 cm</text>
+      <rect x="682.09" y="583.06" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 682.0869 593.6953)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; white-space: pre;">D = 5 cm</text>
+      <rect x="528.5" y="45.05" fill="none" width="109" height="25"/>
+      <text transform="matrix(1 0 0 1 528.501 55.6948)" style="fill: rgb(18, 17, 18); font-family: &quot;Open Sans&quot;; font-size: 14px; white-space: pre;">B = 50 cm</text>
+    </g>
+  </g>
+  <g id="allas_3_">
+    <g id="Layer_106" display="none">
+      <polygon display="inline" fill="#DFE0E2" stroke="#DFE0E2" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="&#10;&#9;&#9;&#9;158.8,361.05 141.8,222.05 601.8,214.55 626.3,224.55 605.8,361.05 485.3,440.55 273.3,440.55 &#9;&#9;"/>
+    </g>
+    <g id="Layer_106_copy_2">
+      <path fill="#DFE0E2" stroke="#CECECD" stroke-width="0.5" stroke-miterlimit="10" d="M644.13,207.61l-24.5-10 c-0.94-0.38-1.92-0.56-2.96-0.56l-460,7.5c-2.13,0.03-4.14,0.97-5.53,2.57c-1.4,1.6-2.05,3.73-1.79,5.84l17,139 c0.26,2.12,1.41,4.03,3.17,5.25l114.5,79.5c1.26,0.87,2.75,1.34,4.28,1.34h212c1.47,0,2.9-0.43,4.13-1.24l120.5-79.5 c1.78-1.17,2.97-3.04,3.29-5.15l20.5-136.5C649.23,212.25,647.34,208.92,644.13,207.61z"/>
+    </g>
+    <g id="Layer_106_copy">
+      <defs>
+        <path id="SVGID_1_" d="M644.13,207.61l-24.5-10c-0.94-0.38-1.92-0.56-2.96-0.56l-460,7.5c-2.13,0.03-4.14,0.97-5.53,2.57 c-1.4,1.6-2.05,3.73-1.79,5.84l17,139c0.28,2.28,1.59,4.31,3.55,5.5l114.5,69.5c1.17,0.71,2.52,1.09,3.89,1.09h212 c1.32,0,2.61-0.35,3.75-1l120.5-69.5c1.98-1.14,3.33-3.12,3.67-5.38l20.5-136.5C649.23,212.25,647.34,208.92,644.13,207.61z"/>
+      </defs>
+      <clipPath id="SVGID_2_">
+        <path d="M644.13,207.61l-24.5-10c-0.94-0.38-1.92-0.56-2.96-0.56l-460,7.5c-2.13,0.03-4.14,0.97-5.53,2.57 c-1.4,1.6-2.05,3.73-1.79,5.84l17,139c0.28,2.28,1.59,4.31,3.55,5.5l114.5,69.5c1.17,0.71,2.52,1.09,3.89,1.09h212 c1.32,0,2.61-0.35,3.75-1l120.5-69.5c1.98-1.14,3.33-3.12,3.67-5.38l20.5-136.5C649.23,212.25,647.34,208.92,644.13,207.61z" transform="matrix(1, 0, 0, 1, 0, 0)" overflow="visible"/>
+      </clipPath>
+      <g id="Layer_3_copy_2" clip-path="url(#SVGID_2_)">
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="306.67" y1="256.05" x2="309.33" y2="433.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="331.67" y1="271.05" x2="334.33" y2="448.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="284.17" y1="261.05" x2="286.83" y2="438.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="262.17" y1="261.05" x2="264.83" y2="438.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="216.17" y1="223.55" x2="220.83" y2="400.89"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="238.42" y1="242.8" x2="241.08" y2="420.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="160.92" y1="185.3" x2="173.58" y2="362.64"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="178.42" y1="199.8" x2="187.08" y2="377.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="195.92" y1="207.8" x2="202.58" y2="385.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="660.67" y1="170.55" x2="647.33" y2="347.89"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="385.8" y1="276.05" x2="385.8" y2="445.55"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="358.8" y1="276.05" x2="358.8" y2="445.55"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="490.05" y1="256.05" x2="487.38" y2="433.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="465.05" y1="271.05" x2="462.38" y2="448.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="512.55" y1="261.05" x2="509.88" y2="438.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="534.55" y1="261.05" x2="531.88" y2="438.39"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="580.55" y1="223.55" x2="575.88" y2="400.89"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="558.3" y1="242.8" x2="555.63" y2="420.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="635.8" y1="185.3" x2="623.13" y2="362.64"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="618.3" y1="199.8" x2="609.63" y2="377.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="600.8" y1="207.8" x2="594.13" y2="385.14"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="410.92" y1="276.05" x2="410.92" y2="445.55"/>
+        <line fill="none" stroke="#CECECD" stroke-miterlimit="10" x1="437.92" y1="276.05" x2="437.92" y2="445.55"/>
+      </g>
+      <g id="Layer_3_copy_4" clip-path="url(#SVGID_2_)">
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="305.67" y1="256.05" x2="308.33" y2="433.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="330.67" y1="271.05" x2="333.33" y2="448.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="283.17" y1="261.05" x2="285.83" y2="438.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="261.17" y1="261.05" x2="263.83" y2="438.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="215.17" y1="223.55" x2="219.83" y2="400.89"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="237.42" y1="242.8" x2="240.08" y2="420.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="159.92" y1="185.3" x2="172.58" y2="362.64"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="177.42" y1="199.8" x2="186.08" y2="377.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="194.92" y1="207.8" x2="201.58" y2="385.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="659.67" y1="170.55" x2="646.33" y2="347.89"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="384.8" y1="276.05" x2="384.8" y2="445.55"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="357.8" y1="276.05" x2="357.8" y2="445.55"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="489.05" y1="256.05" x2="486.38" y2="433.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="464.05" y1="271.05" x2="461.38" y2="448.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="511.55" y1="261.05" x2="508.88" y2="438.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="533.55" y1="261.05" x2="530.88" y2="438.39"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="579.55" y1="223.55" x2="574.88" y2="400.89"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="557.3" y1="242.8" x2="554.63" y2="420.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="634.8" y1="185.3" x2="622.13" y2="362.64"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="617.3" y1="199.8" x2="608.63" y2="377.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="599.8" y1="207.8" x2="593.13" y2="385.14"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="409.92" y1="276.05" x2="409.92" y2="445.55"/>
+        <line fill="none" stroke="#F4F4F4" stroke-miterlimit="10" x1="436.92" y1="276.05" x2="436.92" y2="445.55"/>
+      </g>
+    </g>
+    <g id="Layer_107">
+      <path fill="#5A2524" d="M653.84,193.76l-33.58-63.77c-0.73-1.39-2.02-2.4-3.55-2.78l-129.56-32c-0.43-0.11-0.87-0.16-1.32-0.16 H322.88c-0.43,0-0.86,0.05-1.29,0.15l-133.1,32c-1.33,0.32-2.49,1.12-3.26,2.25l-40.29,59.14c-0.63,0.93-0.97,2.04-0.96,3.16 l0.31,25.86c0.03,2.09,1.24,3.99,3.13,4.9l129.56,62c0.74,0.35,1.55,0.54,2.37,0.54h232.29c0.73,0,1.45-0.15,2.13-0.43 l134.62-56.5c1.86-0.78,3.14-2.51,3.34-4.52l2.71-26.73C654.56,195.8,654.35,194.71,653.84,193.76z"/>
+    </g>
+    <g id="vaalea-hohto_1_" opacity="0.2">
+      <polygon fill="#FFFFFF" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" points="&#10;&#9;&#9;&#9;149.81,188.36 279.36,242.55 511.65,242.55 583.78,204.93 648.25,191.72 615.4,124.91 485.84,97.56 322.88,97.56 189.79,125.91 &#9;&#9;&#10;&#9;&#9;&#9;"/>
+    </g>
+    <g id="Layer_107_copy_3">
+      <rect x="394.29" y="278.97" fill="#5A2524" width="7.03" height="39.17"/>
+    </g>
+    <g id="viivat_1_">
+      <polyline opacity="0.5" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="4" points="&#10;&#9;&#9;&#9;142.14,199.98 275.69,263.13 515.14,263.13 653.9,205.58 &#9;&#9;"/>
+      <polyline opacity="0.5" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="4" points="&#10;&#9;&#9;&#9;257.8,104.39 588.24,208.08 587.47,256.39 &#9;&#9;"/>
+    </g>
+  </g>
+  <g id="Layer_111"/>
+  <g id="square">
+    <g id="Layer_48_copy_2"/>
+    <g id="Layer_50_copy_2"/>
+    <g id="side-view_copy_3">
+      <g id="Layer_24_copy_2"/>
+    </g>
+    <g id="Layer_25_copy_2"/>
+    <g id="nuolet-side-view_copy_3">
+      <g id="Layer_16_copy_6_3_"/>
+    </g>
+    <g id="top-view_copy_3"/>
+    <g id="nuolet-top-view_copy_3">
+      <g id="Layer_16_copy_6_2_"/>
+      <g id="Layer_16_copy_6_1_"/>
+      <g id="Layer_16_copy_6"/>
+    </g>
+    <g id="cover-mockup_copy_2">
+      <g id="allas_copy_2">
+        <g id="Layer_77_copy">
+          <defs>
+            <path id="SVGID_3_" d="M-729.08,169.49c0,0,17.35,115.6,18.75,120.95s1.59,5.53,3.8,7.03 c6.61,4.49,191.99,136.08,226.08,160.25c3.58,2.54,6.5,1.64,9.5-0.08c35.33-20.3,260.44-150.26,265.06-152.93 c2-1.16,4.13-2.41,4.57-4.97c0.54-3.15,18.16-119.19,18.16-119.19"/>
+          </defs>
+          <clipPath id="SVGID_4_">
+            <path d="M-729.08,169.49c0,0,17.35,115.6,18.75,120.95s1.59,5.53,3.8,7.03 c6.61,4.49,191.99,136.08,226.08,160.25c3.58,2.54,6.5,1.64,9.5-0.08c35.33-20.3,260.44-150.26,265.06-152.93 c2-1.16,4.13-2.41,4.57-4.97c0.54-3.15,18.16-119.19,18.16-119.19" transform="matrix(1, 0, 0, 1, 0, 0)" overflow="visible"/>
+          </clipPath>
+          <g id="Layer_3_copy_3_1_" clip-path="url(#SVGID_4_)"/>
+          <g id="Layer_3_copy_3" clip-path="url(#SVGID_4_)"/>
+        </g>
+      </g>
+      <g id="kansi_copy_2">
+        <g id="Layer_49_copy_2"/>
+        <g id="viivat_copy_2"/>
+      </g>
+    </g>
+    <g id="nuolet-mockup_copy_3">
+      <g id="Layer_13_copy_3"/>
+      <g id="Layer_15_copy_3"/>
+      <g id="Layer_23_copy_3"/>
+    </g>
+    <g id="text_copy_3"/>
+  </g>
+  <g id="circular">
+    <g id="side-view_copy">
+      <g id="Layer_51"/>
+    </g>
+    <g id="nuolet-side-view_copy">
+      <g id="Layer_16_copy_4_3_"/>
+    </g>
+    <g id="top-view_copy">
+      <g id="Layer_47"/>
+    </g>
+    <g id="nuolet-top-view_copy">
+      <g id="Layer_16_copy_4_2_"/>
+      <g id="Layer_16_copy_4_1_" display="none"/>
+      <g id="Layer_16_copy_4"/>
+    </g>
+    <g id="nuolet-mockup_copy">
+      <g id="Layer_13_copy"/>
+      <g id="Layer_15_copy"/>
+      <g id="Layer_23_copy"/>
+    </g>
+    <g id="text_copy"/>
+    <g id="allas_2_">
+      <g id="allas_1_">
+        <g id="viivat-tummat">
+          <defs>
+            <path id="SVGID_5_" d="M-1092.91,327.58c-10.69,45.87-109.29,105.28-232.27,105.28c-122.98,0-212.45-59.22-222.27-105.28 c-5.24-24.58-29.32-142.76-29.32-142.76h517.65C-1059.13,184.82-1082.53,283.05-1092.91,327.58z"/>
+          </defs>
+          <clipPath id="SVGID_6_">
+            <path d="M-1092.91,327.58c-10.69,45.87-109.29,105.28-232.27,105.28c-122.98,0-212.45-59.22-222.27-105.28 c-5.24-24.58-29.32-142.76-29.32-142.76h517.65C-1059.13,184.82-1082.53,283.05-1092.91,327.58z" transform="matrix(1, 0, 0, 1, 0, 0)" overflow="visible" opacity="0.2"/>
+          </clipPath>
+          <g id="Layer_55" clip-path="url(#SVGID_6_)"/>
+          <g id="Layer_57" clip-path="url(#SVGID_6_)"/>
+          <g id="Layer_57_copy" clip-path="url(#SVGID_6_)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="rounded-corners">
+    <g id="Layer_48"/>
+    <g id="Layer_50"/>
+    <g id="side-view">
+      <g id="Layer_24"/>
+    </g>
+    <g id="Layer_25"/>
+    <g id="nuolet-side-view">
+      <g id="Layer_16_copy_3"/>
+    </g>
+    <g id="top-view"/>
+    <g id="nuolet-top-view">
+      <g id="Layer_16"/>
+      <g id="Layer_16_copy"/>
+      <g id="Layer_16_copy_2"/>
+    </g>
+    <g id="cover-mockup">
+      <g id="allas">
+        <g id="Layer_3">
+          <defs>
+            <path id="SVGID_7_" d="M-2454.93,163.41c0,0,18.92,121.19,20.31,126.54c1.4,5.35,1.08,4.73,8.22,9.92 c7.13,5.2,173.88,126.5,192.28,139.56c21.4,15.2,37.45,16.13,61.17,6.12c23.72-10,238.03-138.01,242.76-141.34 s5.19-10.31,5.19-10.31l18.38-121.81L-2454.93,163.41z"/>
+          </defs>
+        </g>
+        <g id="Layer_3_copy">
+          <defs>
+            <path id="SVGID_9_" d="M-2454.93,163.41c0,0,18.92,121.19,20.31,126.54c1.4,5.35,1.08,4.73,8.22,9.92 c7.13,5.2,173.88,126.5,192.28,139.56c21.4,15.2,37.45,16.13,61.17,6.12c23.72-10,238.03-138.01,242.76-141.34 s5.19-10.31,5.19-10.31l18.38-121.81L-2454.93,163.41z"/>
+          </defs>
+        </g>
+      </g>
+      <g id="kansi">
+        <g id="Layer_49"/>
+        <g id="viivat"/>
+      </g>
+    </g>
+    <g id="nuolet-mockup">
+      <g id="Layer_13"/>
+      <g id="Layer_15"/>
+      <g id="Layer_23"/>
+    </g>
+    <g id="text"/>
+  </g>
+  <g id="Layer_105"/>
+</svg>
