@@ -15,6 +15,14 @@
     min-height: 100%;
     position: relative;
 
+    .error {
+        display: block;
+        background: #f00;
+        color: #fff;
+        padding: 0.3em 0.5em;
+        border-radius: 0.3em;
+    }
+
     > .close {
         position: absolute;
         top: 0.8em;
@@ -218,6 +226,9 @@
         display: table;
         border-collapse: separate;
         border-spacing: 0 0.5em;
+        > p {
+            display: table-row;
+        }
         > label {
             display: table-row;
             > .before-text {
@@ -226,7 +237,7 @@
             }
             > input {
                 display: table-cell;
-                width: 3em;
+                width: 4em;
             }
             > .after-text {
                 padding-left: 0.5em;
@@ -242,5 +253,26 @@
         //     display: inline-block;
         //     width: 6.5em;
         // }
+    }
+
+    .summary {
+    }
+    .actions {
+        padding-top: 1em;
+        button {
+            cursor: pointer;
+            background: $color1;
+            color: $color1-fg;
+            border: 0;
+            background: $color1;
+            padding: 0.5em 0.8em;
+            font-family: inherit;
+            font-size: 150%;
+            transition: background-color $anim-speed;
+
+            &:hover {
+                background: mix(#fff, $color1, 20%);
+            }
+        }
     }
 }
