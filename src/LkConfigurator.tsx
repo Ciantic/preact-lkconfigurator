@@ -43,13 +43,14 @@ const LANG_FI = {
     sideview: "SIVUKUVA",
     topview: "YLÄKUVA",
     fieldRequired: "Tämä kenttä on pakollinen",
+    fieldMeasurementsFail: "Yhdessä tai useammassa mittakentässä on virheitä",
     oneOrMoreErrors:
         "Yhdessä tai useammassa kentässä on virhe. Ole hyvä, korjaa virheet ja yritä uudelleen.",
 };
 
 const LANG_EN: typeof LANG_FI = {
     formTitle: "Custom cover designer",
-    poolModelTitle: "Pool model and type",
+    poolModelTitle: "Pool brand and model",
     chooseSelect: "Choose",
     poolShapeTitle: "Shape of the cover",
     squareSharp: "Square sharp corners",
@@ -75,6 +76,7 @@ const LANG_EN: typeof LANG_FI = {
     sideview: "SIDE VIEW",
     topview: "TOP VIEW",
     fieldRequired: "This field is required",
+    fieldMeasurementsFail: "One or more measurements has errors",
     oneOrMoreErrors: "One or more of the fields has errors, please fix the errors and try again.",
 };
 
@@ -84,6 +86,12 @@ const DEFAULT_PROPS = {
     locale: "",
     closeUrl: "/",
     actionUrl: "",
+    choices: [] as {
+        id: string;
+        text: string;
+        text2: string;
+        price: string;
+    }[],
 };
 
 type PoolColor = "" | "gray" | "burgundi" | "mahogany" | "black";
@@ -382,13 +390,19 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                 <h3>
                     <span class="n">5</span> {LANG.measurementsTitle}
                 </h3>
+                {showErrors &&
+                    (errors.avalueRequired ||
+                        errors.bvalueRequired ||
+                        errors.cvalueRequired ||
+                        errors.dvalueRequired ||
+                        errors.evalueRequired) && <p class="error">{LANG.fieldMeasurementsFail}</p>}
                 <div class="measurements">
                     <label class="form-row">
                         <span class="before-text">
                             {LANG.length} (A-{LANG.measurement})
-                            {showErrors && errors.avalueRequired && (
+                            {/* {showErrors && errors.avalueRequired && (
                                 <span class="error">{LANG.fieldRequired}</span>
-                            )}
+                            )} */}
                         </span>
                         <input
                             type="number"
@@ -402,9 +416,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                     <label class="form-row">
                         <span class="before-text">
                             {LANG.width} (B-{LANG.measurement})
-                            {showErrors && errors.bvalueRequired && (
+                            {/* {showErrors && errors.bvalueRequired && (
                                 <span class="error">{LANG.fieldRequired}</span>
-                            )}
+                            )} */}
                         </span>
                         <input
                             type="number"
@@ -419,9 +433,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         <label class="form-row">
                             <span class="before-text">
                                 {LANG.rounding} (C-{LANG.measurement})
-                                {showErrors && errors.cvalueRequired && (
+                                {/* {showErrors && errors.cvalueRequired && (
                                     <span class="error">{LANG.fieldRequired}</span>
-                                )}
+                                )} */}
                             </span>
                             <input
                                 type="number"
@@ -437,9 +451,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                     <label class="form-row">
                         <span class="before-text">
                             {LANG.dropping} (D-{LANG.measurement})
-                            {showErrors && errors.dvalueRequired && (
+                            {/* {showErrors && errors.dvalueRequired && (
                                 <span class="error">{LANG.fieldRequired}</span>
-                            )}
+                            )} */}
                         </span>
                         <input
                             type="number"
@@ -455,9 +469,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         <label class="form-row">
                             <span class="before-text">
                                 {LANG.spacing} (E-{LANG.measurement})
-                                {showErrors && errors.evalueRequired && (
+                                {/* {showErrors && errors.evalueRequired && (
                                     <span class="error">{LANG.fieldRequired}</span>
-                                )}
+                                )} */}
                             </span>
                             <input
                                 type="number"
