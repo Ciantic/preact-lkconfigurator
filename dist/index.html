@@ -36,7 +36,25 @@
         <p>Lämpökansi configurator</p>
         <div id="root"></div>
         <script>
-            lkconfigurator.create({}, document.querySelector("#root"));
+            lkconfigurator.create(
+                {
+                    insulationChoices: [
+                        {
+                            id: "foo",
+                            text: "Text1",
+                            text2: "Bar",
+                            price: "999 €",
+                        },
+                        {
+                            id: "something",
+                            text: "Foo and",
+                            text2: "Something",
+                            price: "999 €",
+                        },
+                    ],
+                },
+                document.querySelector("#root")
+            );
         </script>
 
         <h2>Credits</h2>
