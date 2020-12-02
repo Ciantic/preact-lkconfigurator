@@ -148,6 +148,24 @@
         .text {
             display: block;
         }
+
+        &.checkbox {
+            position: relative;
+            > .input {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .text {
+                padding-left: 2.5em;
+            }
+        }
+    }
+    h2 + .form-row {
+        > h3 {
+            border-top: 0;
+        }
     }
 
     .choose-color,

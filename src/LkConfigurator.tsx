@@ -37,6 +37,7 @@ const LANG_FI = {
     rounding: "Kulmien pyöristys",
     dropping: "Helman pituus",
     spacing: "Solkien väli",
+    incorners: "Soljet kulmissa",
     summary: "Yhteenveto",
     addToCart: "Lisää ostoskoriin",
     close: "Sulje",
@@ -70,6 +71,7 @@ const LANG_EN: typeof LANG_FI = {
     rounding: "Corner rounding",
     dropping: "Drop height",
     spacing: "Spacing",
+    incorners: "Spacing equals length",
     summary: "Summary",
     addToCart: "Add to cart",
     close: "Close",
@@ -197,8 +199,15 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
     const [bvalue, setBValue] = useState("");
     const [cvalue, setCValue] = useState("");
     const [dvalue, setDValue] = useState("");
-    const [evalue, setEValue] = useState("");
+    let [evalue, setEValue] = useState("");
+    const [inCorners, setInCorners] = useState(false);
 
+    let hasCorners = shape === "" || shape === "rounded" || shape === "square";
+    let showSpacingField = shape !== "circular";
+    if (inCorners && hasCorners) {
+        showSpacingField = false;
+        evalue = avalue;
+    }
     const errors = {
         colorRequired: color === "",
         shapeRequired: shape === "",
@@ -244,7 +253,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
     const Etext = `${LANG.spacing} (E-${LANG.measurement})`;
 
     const text = `
-        ${LANG.poolModelTitle}: ${model}
+        ${model ? `${LANG.poolModelTitle}: ${model}` : ""}
         ${LANG.poolShapeTitle}: ${getShapeName(shape)}
         ${LANG.colorTitle}: ${getColorName(color)}
         ${LANG.insulationTitle}: ${insulationChoice?.text} ${insulationChoice?.text2} ${
@@ -255,10 +264,14 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
         ${Btext}: ${bvalue} cm
         ${(shape === "rounded" && `${Ctext}: ${cvalue} cm`) || ""}    
         ${Dtext}: ${dvalue} cm
-        ${(shape !== "circular" && `${Etext}: ${evalue} cm`) || ""}
+        ${(hasCorners && !inCorners && `${Etext}: ${evalue} cm`) || ""}
+        ${(hasCorners && inCorners && LANG.incorners) || ""}
     `
         .replace("        ", "")
+        .replace("\r\n\r\n", "\r\n")
         .replace("\n\n", "\n");
+
+    let sectionNumber = 1;
 
     return (
         <div class="lk-wrapper">
@@ -271,28 +284,28 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                 onSubmit={onSubmit}
             >
                 <h2>{LANG.formTitle}</h2>
-
-                <label class="form-row">
-                    <h3 class="no-border">
-                        <span class="n">1</span> {LANG.poolModelTitle}
-                    </h3>
-                    <select
-                        name="pool_model"
-                        id=""
-                        class=""
-                        value={model}
-                        onChange={(e) => setModel(e.currentTarget.value)}
-                    >
-                        <option value="">{LANG.chooseSelect}</option>
-                        {props.modelChoices.map((f) => (
-                            <option value={f}>{f}</option>
-                        ))}
-                    </select>
-                </label>
-
+                {props.modelChoices.length > 0 && (
+                    <label class="form-row">
+                        <h3>
+                            <span class="n">{sectionNumber++}</span> {LANG.poolModelTitle}
+                        </h3>
+                        <select
+                            name="pool_model"
+                            id=""
+                            class=""
+                            value={model}
+                            onChange={(e) => setModel(e.currentTarget.value)}
+                        >
+                            <option value="">{LANG.chooseSelect}</option>
+                            {props.modelChoices.map((f) => (
+                                <option value={f}>{f}</option>
+                            ))}
+                        </select>
+                    </label>
+                )}
                 <div class="form-row choose-shape">
                     <h3 class="text">
-                        <span class="n">2</span> {LANG.poolShapeTitle}
+                        <span class="n">{sectionNumber++}</span> {LANG.poolShapeTitle}
                     </h3>
                     {showErrors && errors.shapeRequired && (
                         <p class="error">{LANG.fieldRequired}</p>
@@ -328,10 +341,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         </label>
                     </div>
                 </div>
-
                 <div class="form-row choose-color">
                     <h3 class="text">
-                        <span class="n">3</span> {LANG.colorTitle}
+                        <span class="n">{sectionNumber++}</span> {LANG.colorTitle}
                     </h3>
                     {showErrors && errors.colorRequired && (
                         <p class="error">{LANG.fieldRequired}</p>
@@ -395,10 +407,9 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         </label>
                     </div>
                 </div>
-
                 <div class="form-row insulationwidth">
                     <h3 class="text">
-                        <span class="n">4</span> {LANG.insulationTitle}
+                        <span class="n">{sectionNumber++}</span> {LANG.insulationTitle}
                     </h3>
 
                     {showErrors && errors.insulationWidthRequired && (
@@ -421,9 +432,8 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         ))}
                     </div>
                 </div>
-
                 <h3>
-                    <span class="n">5</span> {LANG.measurementsTitle}
+                    <span class="n">{sectionNumber++}</span> {LANG.measurementsTitle}
                 </h3>
                 {showErrors &&
                     (errors.avalueRequired ||
@@ -500,7 +510,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         <span class="after-text">cm</span>
                     </label>
 
-                    {shape !== "circular" && (
+                    {showSpacingField && (
                         <label class="form-row">
                             <span class="before-text">
                                 {LANG.spacing} (E-{LANG.measurement})
@@ -518,8 +528,22 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             <span class="after-text">cm</span>
                         </label>
                     )}
-                </div>
-
+                </div>{" "}
+                {hasCorners && (
+                    <label class="form-row checkbox">
+                        <span class="input">
+                            <input
+                                type="checkbox"
+                                checked={inCorners}
+                                onChange={(e) => {
+                                    setInCorners(!inCorners);
+                                    e.preventDefault();
+                                }}
+                            />
+                        </span>
+                        <span class="text">{LANG.incorners}</span>
+                    </label>
+                )}
                 {/*                     
                 <div class="summary">
                     <h3 class="assistive-text">{LANG.summary}</h3>
@@ -548,13 +572,10 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         </tbody>
                     </table>
                 </div> */}
-
                 <input type="hidden" name="pool_as_text" value={text} />
-
                 <div class="actions">
                     <button type="submit">{LANG.addToCart}</button>
                 </div>
-
                 {showErrors && hasErrors && <p class="error">{LANG.oneOrMoreErrors}</p>}
             </form>
 
