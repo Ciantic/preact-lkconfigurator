@@ -16,6 +16,7 @@ const SVG_WORDS = {
 };
 
 const LANG_FI = {
+    settingsFromModel: "Arvoja ei voi muuttaa, ne tulevat mallin tiedoista",
     formTitle: "Lämpökannen suunnittelu",
     poolModelTitle: "Altaan merkki ja malli",
     chooseSelect: "Valitse",
@@ -50,6 +51,7 @@ const LANG_FI = {
 };
 
 const LANG_EN: typeof LANG_FI = {
+    settingsFromModel: "Values can't be changed, they are defined in the model",
     formTitle: "Custom cover designer",
     poolModelTitle: "Pool brand and model",
     chooseSelect: "Choose",
@@ -88,13 +90,25 @@ const DEFAULT_PROPS = {
     locale: "",
     closeUrl: "/",
     actionUrl: "",
-    modelChoices: [] as string[],
+    modelChoices: [] as ModelChoice[],
     insulationChoices: [] as {
         id: string;
         text: string;
         text2: string;
         price: string;
     }[],
+};
+
+type ModelChoice = {
+    brand: string;
+    model: string;
+    shape: PoolShape;
+    avalue: number;
+    bvalue: number;
+    cvalue: number;
+    dvalue: number;
+    evalue: number;
+    incorners: boolean;
 };
 
 type PoolColor = "" | "gray" | "burgundi" | "mahogany" | "black";
@@ -105,7 +119,7 @@ function useRadioButton<T>(value: T) {
     const [state, setState] = useState(value);
     const setter = (t: T) => ({
         value: t,
-        checked: state === t,
+        // checked: state === t,
         onChange: () => setState(t),
     });
     return [state, setter] as [typeof state, typeof setter];
@@ -184,10 +198,11 @@ function getColorName(shape: PoolColor) {
             return "";
     }
 }
+
 const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsGiven) => {
     const props = Object.assign({}, DEFAULT_PROPS, propsGiven);
-    const [model, setModel] = useState("");
-    const [shape, poolShapeRadio] = useRadioButton("" as PoolShape);
+    const [model, setModel] = useState<null | [number, ModelChoice]>(null);
+    let [shape, poolShapeRadio] = useRadioButton("" as PoolShape);
     const [showErrors, setShowErrors] = useState(false);
 
     // const [insulationWidth, insulationWidthRadio] = useRadioButton("" as PoolInsluationWidths);
@@ -195,12 +210,21 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
     const [insulationChoiceId, insulationChoiceRadio] = useRadioButton("");
     const insulationChoice = props.insulationChoices.find((f) => f.id === insulationChoiceId);
     const [color, colorRadio] = useRadioButton("" as PoolColor);
-    const [avalue, setAValue] = useState("");
-    const [bvalue, setBValue] = useState("");
-    const [cvalue, setCValue] = useState("");
-    const [dvalue, setDValue] = useState("");
+    let [avalue, setAValue] = useState("");
+    let [bvalue, setBValue] = useState("");
+    let [cvalue, setCValue] = useState("");
+    let [dvalue, setDValue] = useState("");
     let [evalue, setEValue] = useState("");
-    const [inCorners, setInCorners] = useState(false);
+    let [inCorners, setInCorners] = useState(false);
+    if (model) {
+        shape = model[1].shape;
+        avalue = "" + model[1].avalue;
+        bvalue = "" + model[1].bvalue;
+        cvalue = "" + model[1].cvalue;
+        dvalue = "" + model[1].dvalue;
+        evalue = "" + model[1].evalue;
+        inCorners = model[1].incorners;
+    }
 
     let hasCorners = shape === "" || shape === "rounded" || shape === "square";
     let showSpacingField = shape !== "circular";
@@ -253,7 +277,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
     const Etext = `${LANG.spacing} (E-${LANG.measurement})`;
 
     const text = `
-        ${model ? `${LANG.poolModelTitle}: ${model}` : ""}
+        ${model !== null ? `${LANG.poolModelTitle}: ${model[1].brand}: ${model[1].model}` : ""}
         ${LANG.poolShapeTitle}: ${getShapeName(shape)}
         ${LANG.colorTitle}: ${getColorName(color)}
         ${LANG.insulationTitle}: ${insulationChoice?.text} ${insulationChoice?.text2} ${
@@ -293,12 +317,23 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             name="pool_model"
                             id=""
                             class=""
-                            value={model}
-                            onChange={(e) => setModel(e.currentTarget.value)}
+                            value={"" + (model && model[0])}
+                            onChange={(e) => {
+                                let m = +e.currentTarget.value;
+                                if (e.currentTarget.value == "") {
+                                    setModel(null);
+                                } else if (typeof props.modelChoices[m] !== "undefined") {
+                                    setModel([m, props.modelChoices[m]]);
+                                } else {
+                                    setModel(null);
+                                }
+                            }}
                         >
                             <option value="">{LANG.chooseSelect}</option>
-                            {props.modelChoices.map((f) => (
-                                <option value={f}>{f}</option>
+                            {props.modelChoices.map((f, index) => (
+                                <option value={index}>
+                                    {f.brand}: {f.model}
+                                </option>
                             ))}
                         </select>
                     </label>
@@ -312,28 +347,52 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                     )}
                     <div class="shapes">
                         <label class="shape">
-                            <input type="radio" name="pool_shape" {...poolShapeRadio("square")} />
+                            <input
+                                type="radio"
+                                name="pool_shape"
+                                disabled={model !== null}
+                                checked={shape == "square"}
+                                {...poolShapeRadio("square")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <rect x="2" y="2" width="96" height="96" />
                             </svg>
                             <span class="text">{getShapeName("square")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_shape" {...poolShapeRadio("rounded")} />
+                            <input
+                                type="radio"
+                                name="pool_shape"
+                                disabled={model !== null}
+                                checked={shape == "rounded"}
+                                {...poolShapeRadio("rounded")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <rect x="2" y="2" width="96" height="96" rx="20" />
                             </svg>
                             <span class="text">{getShapeName("rounded")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_shape" {...poolShapeRadio("octagon")} />
+                            <input
+                                type="radio"
+                                name="pool_shape"
+                                disabled={model !== null}
+                                checked={shape == "octagon"}
+                                {...poolShapeRadio("octagon")}
+                            />
                             <svg viewBox="10 10 80 80">
                                 <polygon points="34.2,87.4 12.3,65.5 12.3,34.5 34.2,12.6 65.2,12.6 87.1,34.5 87.1,65.5 65.2,87.4" />
                             </svg>
                             <span class="text">{getShapeName("octagon")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_shape" {...poolShapeRadio("circular")} />
+                            <input
+                                type="radio"
+                                name="pool_shape"
+                                disabled={model !== null}
+                                checked={shape == "circular"}
+                                {...poolShapeRadio("circular")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" />
                             </svg>
@@ -350,7 +409,12 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                     )}
                     <div class="shapes">
                         <label class="shape">
-                            <input type="radio" name="pool_color" {...colorRadio("gray")} />
+                            <input
+                                type="radio"
+                                name="pool_color"
+                                checked={color === "gray"}
+                                {...colorRadio("gray")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" fill="#fff" />
                                 <circle
@@ -364,7 +428,12 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             <span class="text">{getColorName("gray")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_color" {...colorRadio("mahogany")} />
+                            <input
+                                type="radio"
+                                name="pool_color"
+                                checked={color === "mahogany"}
+                                {...colorRadio("mahogany")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" fill="#fff" />
                                 <circle
@@ -378,7 +447,12 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             <span class="text">{getColorName("mahogany")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_color" {...colorRadio("burgundi")} />
+                            <input
+                                type="radio"
+                                name="pool_color"
+                                checked={color === "burgundi"}
+                                {...colorRadio("burgundi")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" fill="#fff" />
                                 <circle
@@ -392,7 +466,12 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             <span class="text">{getColorName("burgundi")}</span>
                         </label>
                         <label class="shape">
-                            <input type="radio" name="pool_color" {...colorRadio("black")} />
+                            <input
+                                type="radio"
+                                name="pool_color"
+                                checked={color === "black"}
+                                {...colorRadio("black")}
+                            />
                             <svg viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" fill="#fff" />
                                 <circle
@@ -422,6 +501,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                                     <input
                                         type="radio"
                                         name="pool_insulationChoice"
+                                        checked={c.id == insulationChoice?.id}
                                         {...insulationChoiceRadio(c.id)}
                                     />
                                 </span>
@@ -435,6 +515,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                 <h3>
                     <span class="n">{sectionNumber++}</span> {LANG.measurementsTitle}
                 </h3>
+                {model && <p class="note">{LANG.settingsFromModel}</p>}
                 {showErrors &&
                     (errors.avalueRequired ||
                         errors.bvalueRequired ||
@@ -454,6 +535,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             name="shape_length"
                             min="0"
                             value={avalue}
+                            disabled={model !== null}
                             onChange={(e) => setAValue(e.currentTarget.value)}
                         />
                         <span class="after-text">cm</span>
@@ -470,6 +552,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             name="shape_width"
                             min="0"
                             value={bvalue}
+                            disabled={model !== null}
                             onChange={(e) => setBValue(e.currentTarget.value)}
                         />
                         <span class="after-text">cm</span>
@@ -487,6 +570,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                                 name="shape_rounding"
                                 min="0"
                                 value={cvalue}
+                                disabled={model !== null}
                                 onChange={(e) => setCValue(e.currentTarget.value)}
                             />
                             <span class="after-text">cm</span>
@@ -505,6 +589,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             name="shape_dropping"
                             min="0"
                             value={dvalue}
+                            disabled={model !== null}
                             onChange={(e) => setDValue(e.currentTarget.value)}
                         />
                         <span class="after-text">cm</span>
@@ -523,6 +608,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                                 name="shape_spacing"
                                 min="0"
                                 value={evalue}
+                                disabled={model !== null}
                                 onChange={(e) => setEValue(e.currentTarget.value)}
                             />
                             <span class="after-text">cm</span>
@@ -534,7 +620,8 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                         <span class="input">
                             <input
                                 type="checkbox"
-                                checked={inCorners}
+                                disabled={model !== null}
+                                checked={!!inCorners}
                                 onChange={(e) => {
                                     setInCorners(!inCorners);
                                     e.preventDefault();

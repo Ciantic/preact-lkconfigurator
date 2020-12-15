@@ -16,12 +16,17 @@
     position: relative;
     line-height: 1.5;
 
+    .note,
     .error {
         display: block;
         background: #f00;
         color: #fff;
         padding: 0.3em 0.5em;
         border-radius: 0.3em;
+    }
+    .note {
+        background: #eeeeee;
+        color: #222;
     }
 
     > .close {
