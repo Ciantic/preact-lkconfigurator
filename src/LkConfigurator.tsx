@@ -19,7 +19,7 @@ const LANG_FI = {
     settingsFromModel: "Arvoja ei voi muuttaa, ne tulevat mallin tiedoista",
     formTitle: "Lämpökannen suunnittelu",
     poolModelTitle: "Altaan merkki ja malli",
-    chooseSelect: "Valitse",
+    chooseSelect: "Oma suunnitelma",
     poolShapeTitle: "Altaan muoto",
     squareSharp: "Neliö terävät kulmat",
     squareRounded: "Neliö pyöristetyt kulmat",
@@ -54,7 +54,7 @@ const LANG_EN: typeof LANG_FI = {
     settingsFromModel: "Values can't be changed, they are defined in the model",
     formTitle: "Custom cover designer",
     poolModelTitle: "Pool brand and model",
-    chooseSelect: "Choose",
+    chooseSelect: "Own design",
     poolShapeTitle: "Shape of the cover",
     squareSharp: "Square sharp corners",
     squareRounded: "Square rounded corners",
@@ -317,7 +317,7 @@ const LkConfigurator: FunctionComponent<Partial<typeof DEFAULT_PROPS>> = (propsG
                             name="pool_model"
                             id=""
                             class=""
-                            value={"" + (model && model[0])}
+                            value={"" + (model !== null ? model[0] : "")}
                             onChange={(e) => {
                                 let m = +e.currentTarget.value;
                                 if (e.currentTarget.value == "") {
